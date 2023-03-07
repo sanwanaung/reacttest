@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: lightblue;
+  font-family: "Outfit", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 200px;
+  padding: 10px 8px 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.title h2 {
+  font-size: 0.726rem;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.description p {
+  font-size: 0.525rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.img {
+  width: 160px;
+  height: 160px;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 375px) {
+  .home-page {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    flex-direction: column;
+    flex-basis: 98%;
+    text-align: center;
+  }
+
+  .img {
+    height: 290px;
+    width: 290px;
+  }
+
+  .title h2 {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .description p {
+    font-size: 0.826rem;
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 20px;
   }
 }
